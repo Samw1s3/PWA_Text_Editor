@@ -3,8 +3,6 @@ const butInstall = document.getElementById('buttonInstall');
 
 window.addEventListener("beforeinstallprompt", (event) => {
     // Store the triggered events
-    event.preventDefault();
-  console.log('👍', 'beforeinstallprompt', event);
   window.deferredPrompt = event;
 
   // Remove the hidden class from the button.
