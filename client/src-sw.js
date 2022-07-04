@@ -23,7 +23,6 @@ warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
 });
-  
 
 registerRoute(
   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
