@@ -2,7 +2,7 @@ const butInstall = document.getElementById('buttonInstall');
 
 
 window.addEventListener("beforeinstallprompt", (event) => {
-  // Store the triggered events
+    // Store the triggered events
   window.deferredPrompt = event;
 
   // Remove the hidden class from the button.
@@ -11,14 +11,14 @@ window.addEventListener("beforeinstallprompt", (event) => {
 
 butInstall.addEventListener("click", async () => {
   const promptEvent = window.deferredPrompt;
-
+  console.log("button clicked");
   if (!promptEvent) {
-    return;
+    return console.log('broken'); 
   }
 
   // Show prompt
   promptEvent.prompt();
-
+  console.log('event started');
   // Reset the deferred prompt variable, it can only be used once.
   window.deferredPrompt = null;
 
